@@ -1,0 +1,151 @@
+
+
+<p class="text-start fs-5">Atualizar Pedido</p>
+<p>
+    <form id="pedidoForm" action="/atualizar" method="POST">
+        <input type="text" name="id" value="{{data.id}}" hidden>
+        <div class="mb-3 text-start">
+            <label class="form-label">Nome:</label>
+            <input type="name" name="nome" class="form-control" id="nome" value="{{data.nome}}">
+        </div>
+        <div class="mb-3 text-start">
+            <label class="form-label">Telefone:</label>
+            <input type="number" name="telefone" class="form-control" id="telefone" placeholder="(00)00000-0000" value="{{data.telefone}}">
+        </div>
+        <div class="mb-3 text-start">
+            <label class="form-label">Endereço de entrega:</label>
+            <input type="text" name="endereco" class="form-control" id="endereco" value="{{data.endereco}}">
+        </div>
+
+        <div class="container">
+
+            <div class="row g-3 align-items-center">
+
+                <div class="mb-3 col">
+                    <label class="form-label">Adicionar Item:</label>
+                    <select name="item" class="form-select" id="item">
+                        <optgroup label="Pães">
+                            <option value="pao_frances">Pão francês</option>
+                            <option value="pao_de_forma">Pão de forma</option>
+                            <option value="pao_integral">Pão integral</option>
+                            <option value="pao_de_milho">Pão de milho</option>
+                            <option value="pao_de_centeio">Pão de centeio</option>
+                            <option value="pao_de_batata">Pão de batata</option>
+                            <option value="pao_de_queijo">Pão de queijo</option>
+                            <option value="baguetes">Baguetes</option>
+                            <option value="ciabatta">Ciabatta</option>
+                            <option value="focaccia">Focaccia</option>
+                        </optgroup>
+                        <optgroup label="Bolos e Tortas">
+                            <option value="bolo_de_cenoura">Bolo de cenoura</option>
+                            <option value="bolo_de_chocolate">Bolo de chocolate</option>
+                            <option value="bolo_de_laranja">Bolo de laranja</option>
+                            <option value="bolo_de_fuba">Bolo de fubá</option>
+                            <option value="bolo_de_iogurte">Bolo de iogurte</option>
+                            <option value="torta_de_maca">Torta de maçã</option>
+                            <option value="torta_de_limao">Torta de limão</option>
+                            <option value="cheesecake">Cheesecake</option>
+                            <option value="torta_de_morango">Torta de morango</option>
+                            <option value="torta_de_frango">Torta de frango</option>
+                        </optgroup>
+                        <optgroup label="Doces e Sobremesas">
+                            <option value="brigadeiro">Brigadeiro</option>
+                            <option value="beijinho">Beijinho</option>
+                            <option value="pudim">Pudim</option>
+                            <option value="quindim">Quindim</option>
+                            <option value="mousse_de_maracuja">Mousse de maracujá</option>
+                            <option value="pave">Pavê</option>
+                            <option value="churros">Churros</option>
+                            <option value="cocada">Cocada</option>
+                            <option value="doce_de_leite">Doce de leite</option>
+                            <option value="palha_italiana">Palha italiana</option>
+                        </optgroup>
+                        <optgroup label="Salgados">
+                            <option value="coxinha">Coxinha</option>
+                            <option value="esfirra">Esfirra</option>
+                            <option value="pastel">Pastel</option>
+                            <option value="empada">Empada</option>
+                            <option value="kibe">Kibe</option>
+                            <option value="pao_de_batata_recheado">Pão de batata recheado</option>
+                            <option value="salgadinho_de_queijo">Salgadinho de queijo</option>
+                            <option value="croquete">Croquete</option>
+                            <option value="bolinho_de_bacalhau">Bolinho de bacalhau</option>
+                            <option value="paozinho_de_presunto_e_queijo">Pãozinho de presunto e queijo</option>
+                        </optgroup>
+                        <optgroup label="Bebidas">
+                            <option value="cafe_expresso">Café expresso</option>
+                            <option value="cappuccino">Cappuccino</option>
+                            <option value="cha">Chá</option>
+                            <option value="suco_natural">Suco natural</option>
+                            <option value="chocolate_quente">Chocolate quente</option>
+                            <option value="agua_de_coco">Água de coco</option>
+                            <option value="refrigerantes">Refrigerantes</option>
+                            <option value="smoothies">Smoothies</option>
+                            <option value="leite_achocolatado">Leite achocolatado</option>
+                            <option value="iogurte">Iogurte</option>
+                        </optgroup>
+                        <optgroup label="Produtos Artesanais">
+                            <option value="geleias_caseiras">Geleias caseiras</option>
+                            <option value="mel">Mel</option>
+                            <option value="compotas_de_frutas">Compotas de frutas</option>
+                            <option value="pates">Patês</option>
+                            <option value="manteiga_artesanal">Manteiga artesanal</option>
+                            <option value="queijos_artesanais">Queijos artesanais</option>
+                            <option value="molhos_caseiros">Molhos caseiros</option>
+                            <option value="conservas">Conservas</option>
+                            <option value="bolachas_artesanais">Bolachas artesanais</option>
+                            <option value="granola_caseira">Granola caseira</option>
+                        </optgroup>
+                        <optgroup label="Produtos Especiais">
+                            <option value="paes_sem_gluten">Pães sem glúten</option>
+                            <option value="doces_sem_acucar">Doces sem açúcar</option>
+                            <option value="produtos_veganos">Produtos veganos</option>
+                            <option value="produtos_sem_lactose">Produtos sem lactose</option>
+                            <option value="paes_artesanais">Pães artesanais</option>
+                            <option value="produtos_organicos">Produtos orgânicos</option>
+                            <option value="sobremesas_fit">Sobremesas fit</option>
+                            <option value="lanches_naturais">Lanches naturais</option>
+                            <option value="saladas_de_frutas">Saladas de frutas</option>
+                            <option value="smoothies_detox">Smoothies detox</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary" id="addBtn"> + </button>
+                </div>
+
+            </div>
+
+
+            <div class="container border p-3">
+                <p>Lista de Itens:</p>
+                <ul id="lista-pedidos" class="list-group">
+                    
+                </ul>
+            </div>
+
+        </div>
+
+        <input type="hidden" id="itensInput" name="itens">
+
+        <div class="mb-3 text-start">
+            <label class="form-label">Observação:</label>
+            <textarea name="observacao" class="form-control" placeholder="" id="observacao" style="height: 100px">{{data.observacao}}</textarea>
+        </div>
+        
+        <div class="mb-3 text-start">
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </div>
+    </form>
+</p>
+
+      
+<script src="/public/js/editar.js"></script>
+
+
+{{#each data.itens}}
+    <script>    
+        adicionarItem('{{this.item}}', {{this.quantity}});
+    </script>
+{{/each}}

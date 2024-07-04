@@ -1,0 +1,52 @@
+
+    <div class="container">
+        
+        {{#each data}}
+
+        <div class="card">
+
+            <div class="card-body">
+                
+                <h5 class="card-title">{{this.nome}}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">{{this.telefone}}</h6>
+                <p class="card-text">{{this.endereco}}</p>
+
+                <p class="card-text">{{this.observacao}}</p>
+                
+                <div class="container border p-3 mb-3">
+                    <p>Lista de Itens:</p>
+                    <ul class="list-group">
+                        {{#each itens}}
+                        <li class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <p>{{this.item}}</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="vr"></div>
+                                </div>
+                                <div class="col-auto">
+                                    <p>Quantidade</p>
+                                </div>
+                                <div class="col-auto">
+                                    <p>{{this.quantity}}</p>
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+
+                
+                <a href="/editar/{{id}}"><button type="button" class="btn btn-primary"> Editar </button></a>
+            
+                <a href="/excluir/{{id}}"><button type="button" class="btn btn-danger"> Excluir </button></a>
+                
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+    
