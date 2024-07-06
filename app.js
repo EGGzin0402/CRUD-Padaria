@@ -35,9 +35,14 @@ app.use('/public', express.static("public"));
 
 // Routes
 
-app.get("/", function (req, res) {
+app.get("/pedidos", function (req, res) {
   res.render("pedidos");
 });
+
+app.get("/", function (req, res) {
+  res.render("home");
+});
+
 
 app.get("/consulta", async function (req, res) {
     const dataSnapshot = await db.collection('pedidos').get();
@@ -112,4 +117,5 @@ app.post("/atualizar", function (req, res) {
 
 app.listen(8081, function () {
   console.log("Servidor ativo!");
+  console.log("Porta 8081!");
 });
