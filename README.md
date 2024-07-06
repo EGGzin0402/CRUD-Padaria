@@ -1,3 +1,9 @@
+Padaria Boitatá é dedicada a oferecer os pães mais frescos e saborosos da região. Utilizamos ingredientes de alta qualidade e receitas tradicionais para garantir a melhor experiência gastronômica.
+
+![image](https://github.com/EGGzin0402/CRUD-Padaria/assets/99427234/7badcd1e-2a88-4ab9-9558-f5c499ccd985)
+
+![image](https://github.com/EGGzin0402/CRUD-Padaria/assets/99427234/61878312-9afb-46e8-a7df-2e46002d96b6)
+
 # ETAPAS
 O projeto ainda está em desenvolvimento:
 
@@ -11,22 +17,9 @@ O projeto ainda está em desenvolvimento:
 
 > Projeto CRUD de Agendamentos com Node.js e Handlebars
 
-# INICIANDO PROJETO</h1>
-### (SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
-- Crie uma base de dados MySQL chamada "agendamentos_bd"
-```
-git clone -b homologacao https://github.com/vek03/CRUD-nodejs-handlebar.git
-cd <projeto>
-npm i
-npm run start
-```
-- htttp://localhost:8081
-
 <br><br>
 
 # EXPLICAÇÕES
-- Models: arquivos da estrutura das tabelas
-- Server: arquivo de conexão ao banco
 - app.js: inicialização das bibliotecas, rotas e operações
 - views/layout: arquivos de layout que serão utilizados em todas as páginas
 - views: paginas do projeto 
